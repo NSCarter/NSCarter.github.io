@@ -34,9 +34,12 @@ a:visited, a:link{
 
 p {
   font-family: courier;
-  float: right;
   width: 50%;
   margin-right: 50px;
+}
+
+#floated {
+  float: right;  
 }
 
 #body-image {
