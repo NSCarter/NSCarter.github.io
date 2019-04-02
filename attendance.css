@@ -35,8 +35,8 @@ a:visited, a:link{
 p {
   font-family: courier;
   float: none;
-  width: 50%;
   margin-right: 50px;
+  margin-left: 50px;
 }
 
 #body-image {
@@ -44,6 +44,7 @@ p {
   width: 20%;
   margin-left: 200px;
   padding-bottom: 20px;
+  padding-left: 50ps;
 }
 
 p a:visited, p a:link{
