@@ -36,7 +36,7 @@ h3 {
   padding-top: 50px;
 }
 
-#codewars, #fcc, #hackerrank{
+#codewars, .fcc, #hackerrank{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -54,6 +54,13 @@ div img{
   width: 33%;
 }
 
-#fcc{
-  height: 550px;
+.fcc {
+  display: inline;
+  vertical-align: top;
+  height: 33%;
+  width: 33%;
+}
+
+#fcc {
+  text-align: center;
 }
