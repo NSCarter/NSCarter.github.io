@@ -1,0 +1,33 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Android App</title>
+  <link rel="icon" href="../Images/icon.png">
+  <link rel="stylesheet" type="text/css" href="../CSS/attendance.css">
+</head>
+<body>
+  <img src="../Images/photo.jpg" id="photo">
+  <h1>NIAMH CARTER</h1>
+  <center>
+    <h5><a href="../index.html">HOME</a></h5>
+    <h5><a href="../HTML/about.html">ABOUT</a></h5>
+    <h5><a href="../HTML/contact.html">CONTACT</a></h5>
+  </center>
+  <hr>
+  <h2>ANDROID APP</h2>
+  <img id="body-image" src="../Images/attendance.jpg" alt="Attendance System App">
+  <pFor our project, our team decided to do the alternative attendance system project. We split our app into three main parts: a website, a database and an app. </p>
+  <p>The website is to be used by the lab lecturers and tutors. The website would allow the member of staff to log in and view the attendance information of their modules. They should also be able to see a list of free rooms in the building, the current attendance of their current lesson and see how many people are on time, late or absent. The website also allows the staff member to manually input a student’s attendance if the student has a problem signing in with the mobile app.</p>
+  <p>The app is to be used by the students to register their attendance. The student would log in and then scan the QR code within their lesson room. The app then checks location to ensure they are in the university building. This is to stop students from sending the QR code to other students at home. The app should also allow the student to see their attendance date and view a list of all the free rooms with no other people in it. </p>
+  <p>The app and the website should be connected together by the database. When the student registers their attendance through the app or the staff member manually submits a student’s attendance the database is updated. Both the app and the website should be able to query the database to get the information they need for the attendance data or for other uses such as finding free rooms.</p>
+  <p>By the end of the project, we got most of the key functions completed. The website allows someone to sign in and view the attendance for their current lessons. They are also able to manually register a student’s attendance and update the database. However, they cannot view the attendance data for their modules over from previous lessons over time. The website also does not display a list of free rooms in the building.</p>
+  <p>The app allows someone to sign in and scan a QR code. The app then checks the user's location and checks that they are within the building. The user can also view their attendance data as a pie or bar chart. However, when the user registers their attendance it does not update the database.</p>
+  <p>The main problem with the attendance system is that the website and the app do not connect to the same database. Each has its own database. This means that any updates made by the website do not affect the app and vice versa.</p>
+  <br />
+  <p>For this project, I worked on creating the app for the students to use as I have some previous experience with app development using Android Studio. I worked on three main parts of the app: the QR scanner, connecting the app to the database and generating a list of free rooms.</p>
+  <p>The first part of the app I worked on was the QR scanner. The students can take a picture of the QR code with their phone. The QR code contains information about the room they are in and the image of the QR code is sent to an API that reads the information stored in the QR code. This process begins when the user clicks the scan button in the app. The app checks whether the user has granted permissions to let the app use the camera and read and write to their storage. If they haven’t, they are instructed to do so, if they have, the camera opens so they can take a picture. Once the user has taken a picture it is saved on the bitmap however, a bitmap cannot be used so I need to convert it to another format such as a JPEG. This is done compressing the image and saving it to the user’s phone. This image can then be uploaded to online storage. I used Firebase online storage as it is free to use allows you to control who can read and write to the storage. With the image now stored online, the URL of the image can be retrieved. This URL is used to send a GET request to the API with sends back a JSON object which contains the data I need to then pass on to the code that checks the user is in the building. From doing this part of the app I developed lots of skills such as saving to a device, uploading to the Internet, sending a GET request to an API and using JSON.</p>
+  <p>The second part of the app that I worked on was connecting the database. The database created by my teammates created used MySQL. To create the app, I used Android Studio which only supports SQLite, not MySQL, this meant that I had to create a PHP script to help with the communication between the app and the database. The app sends its query to the PHP script, which sends it to the database. The database then sends a result back to the PHP script, which then sends it back to the app. I created two PHP scripts, one to handle SELECT queries and one to handle INSERT queries because one would return a result and the other would not. Given more time, I would have like to use placeholders in my PHP scripts instead of taking the entire SQL query to help improve security and protect against SQL injection. From doing this part of the app I learnt how to use PHP which I had never used before.</p>
+  <p>The final part of the app that I worked on was generating a list of free rooms. Once the app was connected to the database, this once done by first getting a list of all the rooms in the building by querying the ‘Location’ database. The app then gets the current date and checks the tables for each room in the database to see if there is currently anyone signed into the room. If there isn’t, the room is added to a list to be displayed to the user.</p>
+</body>
+</html>
