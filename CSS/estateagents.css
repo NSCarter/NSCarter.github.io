@@ -1,0 +1,50 @@
+#photo {
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%
+}
+
+h1 , h2{
+  font-family: courier;
+  width: 100%;
+  text-align: center;
+}
+
+h5 {
+  font-family: courier;
+  display: inline;
+  padding: 10px 10px 10px 10px;
+  text-decoration: underline;
+}
+
+hr {
+  border-width: 2px;
+  border-color: black;
+  width: auto;
+  margin: 20px;;
+}
+
+p {
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: auto;
+  font-family: courier;
+}
+
+video {
+    width: auto;
+    height: 60%;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a:visited, a:link{
+  color: black;
+}
