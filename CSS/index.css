@@ -29,15 +29,42 @@ hr {
 }
 
 #projects img {
-  display: inline;
   height: 250px;
-  width: 33%;
+  width: 100%
 }
 
-#projects img:hover {
-  opacity: .8;
+.container:hover img {
+  filter: brightness(15%);
+  transition: filter 0.4s
 }
 
 a:visited, a:link{
   color: black;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: courier;
+  font-size: 200%;
+  color: white;
+  visibility: hidden;
+}
+
+.container:hover .text {
+  visibility: visible;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0.5rem
 }
