@@ -1,0 +1,23 @@
+h1 , h2, p {
+  font-family: courier;
+  width: 100%;
+  text-align: center;
+}
+
+h5 {
+  font-family: courier;
+  display: inline;
+  padding: 10px 10px 10px 10px;
+  text-decoration: underline;
+}
+
+hr {
+  border-width: 2px;
+  border-color: black;
+  width: auto;
+  margin: 20px;;
+}
+
+a:visited, a:link{
+  color: black;
+}
