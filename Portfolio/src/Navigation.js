@@ -10,7 +10,7 @@ import Contact from './BasePages/Contact.js';
 export default function Navigation() {
     return (
         <Router>
-            <Navbar bg='light' style={{paddingRight: 25, paddingLeft: 25}}>
+            <Navbar sticky='top' style={{paddingRight: 25, paddingLeft: 25, background: 'LightSkyBlue'}}>
                 <Navbar.Brand>
                     <Nav.Link as={Link} to="/">
                         <h1>Niamh Carter</h1>
