@@ -1,9 +1,21 @@
 h3 {
     padding-top: 20px;
+    font-size: 28pt;
+}
+
+h1 {
+    font-size: 48pt;
 }
 
 #title {
     padding-top: 75px;
     padding-left: 100px;
     max-width: 50%;
+}
+
+img {
+    padding-left: 100px;
+    padding-right: 100px;
+    max-width: 50%;
+    padding-top: 75px;
 }
