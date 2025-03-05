@@ -19,3 +19,21 @@ img {
     max-width: 50%;
     padding-top: 75px;
 }
+
+#button {
+    margin-top: 60px;
+    margin-right: 200px;
+    background-color: lightskyblue;
+    color: black;
+    float: right;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: xx-large;
+    border-color: transparent;
+}
+
+#button:hover {
+    background-color: rgb(127, 189, 228);
+}
