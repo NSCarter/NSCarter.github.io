@@ -1,0 +1,80 @@
+{
+    "projects": [
+        {
+            "name": "Breakout",
+            "image": "Breakout.png",
+            "skills": ["Godot", "Game Development"],
+            "projectURLs": {
+                "github": "https://github.com/NSCarter/Breakout",
+                "itchio": "https://nscarter.itch.io/breakout"
+            }
+        },
+        {
+            "name": "Flappy Fish",
+            "image": "FlappyFish.png",
+            "skills": ["Godot", "Game Development"],
+            "projectURLs": {
+                "github": "https://github.com/NSCarter/Flappy-Fish",
+                "itchio": "https://nscarter.itch.io/flappy-fish"
+            }
+        },
+        {
+            "name": "Pong",
+            "image": "Pong.png",
+            "skills": ["Godot", "Game Development"],
+            "projectURLs": {
+                "github": "https://github.com/NSCarter/Pong",
+                "itchio": "https://nscarter.itch.io/pong"
+            }
+        },
+        {
+            "name": "Estate Agents Website",
+            "image": "EstateAgents.jpg",
+            "skills": ["React JS", "Rest", "Web API", "Javascript"],
+            "text": "In my final year of university I took a module in web API development. For this module I had to create a Node based RESTful API with a React JS single page application frontend. I chose to create a real estate listings web app. The site allowed users to search for and view properties, filter by keywords and send a message to the eastate agents. The site also allowed estate agents to sign in or register to the site, which then allows them to add new or update existing properties and access any messages sent to them by the general public.\n\nThe video below shows the website and demostrates all of its functionality.",
+            "video": "EstateAgents.mp4"
+        },
+        {
+            "name": "News Site",
+            "image": "NewSite.png",
+            "skills": ["HTML", "CSS", "Javascript"],
+            "text": "In my final year of university I completed a module about software quality and process management. For this module I created a news site where users can read about local news and add new articles. The site was created using HTML, CSS and Javacript and was developed using test driven development.\n\nThe video below shows the website and demostrates all of its functionality.",
+            "video": "NewsSite.mp4"
+        },
+        {
+            "name": "Alternative Attendance System",
+            "image": "QR.png",
+            "skills": ["Android", "Java", "PHP"],
+            "text": "In my second year of university, I had a module to work on a real world project. For our project, our team decided to create an alternative attendance system for the university. The current system requires students to tap their ID badge on a registration point inside the room. The problem with this current design is that it is possible for students to cheat by giving their ID badge to someone else to sign in for them and not actually attend the lesson. Our plan to stop this problem was to display a QR code in each room. The student would have to scan the QR code using an app, which would then check the device's location to ensure they are within the room. This stops people from sharing the QR code with other people who have not attented the lesson, as it will not work them them, and we belive people are much less likely to give their phone to someone else to register for them. We split our team into three groups, each working on a different part of the system: the website, the database and the app.\n\nThe website is to be used by the lab lecturers and tutors. The website would allow the member of staff to log in and view the attendance information of their modules. They should also be able to see a list of free rooms in the building, the current attendance of their current lesson and see how many people are on time, late or absent. The website also allows the staff member to manually input a student’s attendance if the student has a problem signing in with the mobile app.\n\nThe app is to be used by the students to register their attendance. The student would log in and then scan the QR code within their lesson room. The app then checks location to ensure they are in the university building. This is to stop students from sending the QR code to other students at home. The app should also allow the student to see their attendance date and view a list of all the free rooms with no other people in it.\n\nThe app and the website should be connected together by the database. When the student registers their attendance through the app or the staff member manually submits a student’s attendance the database is updated. Both the app and the website should be able to query the database to get the information they need for the attendance data or for other uses such as finding free rooms.\n\nBy the end of the project, we got most of the key functions completed. The website allows someone to sign in and view the attendance for their current lessons. They are also able to manually register a student’s attendance and update the database. However, they cannot view the attendance data for their modules over from previous lessons over time. The website also does not display a list of free rooms in the building.\n\nThe app allows someone to sign in and scan a QR code. The app then checks the user's location and checks that they are within the building. The user can also view their attendance data as a pie or bar chart. However, when the user registers their attendance it does not update the database.\n\nThe main problem with the attendance system is that the website and the app do not connect to the same database. Each has its own database. This means that any updates made by the website do not affect the app and vice versa.\n\n\nFor this project, I worked on creating the app for the students to use as I have some previous experience with app development using Android Studio. I worked on three main parts of the app: the QR scanner, connecting the app to the database and generating a list of free rooms.\n\nThe first part of the app I worked on was the QR scanner. The students can take a picture of the QR code with their phone. The QR code contains information about the room they are in and the image of the QR code is sent to an API that reads the information stored in the QR code. This process begins when the user clicks the scan button in the app. The app checks whether the user has granted permissions to let the app use the camera and read and write to their storage. If they haven’t, they are instructed to do so, if they have, the camera opens so they can take a picture. Once the user has taken a picture it is saved on the bitmap however, a bitmap cannot be used so I need to convert it to another format such as a JPEG. This is done compressing the image and saving it to the user’s phone. This image can then be uploaded to online storage. I used Firebase online storage as it is free to use allows you to control who can read and write to the storage. With the image now stored online, the URL of the image can be retrieved. This URL is used to send a GET request to the API with sends back a JSON object which contains the data I need to then pass on to the code that checks the user is in the building. From doing this part of the app I developed lots of skills such as saving to a device, uploading to the Internet, sending a GET request to an API and using JSON.\n\nThe second part of the app that I worked on was connecting the database. The database created by my teammates created used MySQL. To create the app, I used Android Studio which only supports SQLite, not MySQL, this meant that I had to create a PHP script to help with the communication between the app and the database. The app sends its query to the PHP script, which sends it to the database. The database then sends a result back to the PHP script, which then sends it back to the app. I created two PHP scripts, one to handle SELECT queries and one to handle INSERT queries because one would return a result and the other would not. Given more time, I would have like to use placeholders in my PHP scripts instead of taking the entire SQL query to help improve security and protect against SQL injection. From doing this part of the app I learnt how to use PHP which I had never used before.\n\nThe final part of the app that I worked on was generating a list of free rooms. Once the app was connected to the database, this was done by first getting a list of all the rooms in the building by querying the ‘Location’ database. The app then gets the current date and checks the tables for each room in the database to see if there is currently anyone signed into the room. If there isn’t, the room is added to a list to be displayed to the user.",
+            "moreImage": "Attendance.png"
+        },
+        {
+            "name": "Text-Based Game",
+            "imageURL": "TextBasedGame.png",
+            "skills": ["C++", "SQL"],
+            "projectURLs": {
+                "github": "https://github.com/NSCarter/FarmJohn"
+            },
+            "text": "For my third university project, we had to create a text-based game using C++. We decided to create a farming simulator game. The project was my first time using C++.\n\nFor this project, I was in charge of creating the user inventory and shop mechanic that allows players to buy and retrieve items. We also had to connect the game to an SQL database so we could store a retrieve data when the user goes offline."
+        },
+        {
+            "name": "Chatbot",
+            "imageURL": "Chatbot.png",
+            "skills": ["Python"],
+            "projectURLs": {
+                "github": "https://github.com/NSCarter/Chatbot"
+            },
+            "text": "For my second university project, I had to work with a team to create a chatbot using Python. We decided to create a chatbot that would help people find their way around Coventry. We split the project into smaller tasks. One person took the input from the user and found the keywords. The next person used these keywords to look on the Internet for the relevant information. The final person took this information and put it into a sentence that would be easy for the user to read. The final person was in charge of creating the GUI and integrating the different pieces of code together.\n\nMy task was to find information based on the keywords found by the first person. I used API's to connect to the Internet and find the relevant information. This was my first time using API's and I hadn't heard of them before this project but I found them very interesting." 
+        },
+        {
+            "name": "Conway's Game of life",
+            "image": "ConwaysGameOfLife.png",
+            "skills": ["Python", "OOP"],
+            "projectURLs": {
+                "github": "https://github.com/NSCarter/Conway-s-Game-of-Life"
+            },
+            "text": "For my A-level Computer Science project, I created a simulation for Conway's Games of Life. The program had a GUI that allows users to create their own patterns or they could choose a premade pattern. You can change the size of the grid and change the speed at which the program runs. This program showed the use of object-oriented programming techniques.\n\nFor this project, I also had to create a report which contained my analysis, design, implementation,testing and evaluation for my project. I had to research how the algorithm for Conway's Game of Life worked, what simulations were already available and think about how I could improve upon those that already exist.",
+            "moreImage": "ConwaysGameOfLife"
+        }
+    ]
+}
