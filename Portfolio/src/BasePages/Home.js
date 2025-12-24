@@ -11,6 +11,7 @@ export default function Home() {
         <div>
             <HeroSection />
             <Container fluid id="container">
+                <h3 class="containerHeader">Most Recent Projects</h3>
                 <Row>
                     <Col>
                         <ProjectCard project={projectData.projects[0]} />
